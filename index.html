@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customize Termux Console with ZSH, oh-my-zsh, Powerlevel10k, termux-style, and LSD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Customize Termux Console with ZSH, oh-my-zsh, Powerlevel10k, termux-style, and LSD</h1>
+    </header>
+    <main>
+        <article>
+            <section>
+                <img src="termux.png" alt="Termux customization" class="hero-image">
+            </section>
+            <section>
+                <h2>Prerequisites</h2>
+                <ul>
+                    <li>Termux installed on your Android device</li>
+                    <li>Internet connection</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Installation Steps</h2>
+                <ol>
+                    <li>
+                        <strong>Install zsh & git</strong>:
+                        <div class="code-block">
+                            <pre><code>apt install zsh git</code></pre>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Install oh-my-zsh</strong>:
+                        <div class="code-block">
+                            <pre><code>sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"</code></pre>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Install Powerlevel10k</strong>:
+                        <div class="code-block">
+                            <pre><code>git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k</code></pre>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+                        </div>
+                        <p>Set <code>ZSH_THEME="powerlevel10k/powerlevel10k"</code> in <code>~/.zshrc</code></p>
+                    </li>
+                    <li>
+                        <strong>Install and configure LSD</strong>:
+                        <div class="code-block">
+                            <pre><code>apt install lsd</code></pre>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+                        </div>
+                        <p>Add alias to <code>.zshrc</code>:</p>
+                        <div class="code-block">
+                            <pre><code>echo "alias ls=lsd" >> ~/.zshrc</code></pre>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+                        </div>
+                    </li>
+                    <li>
+                        <strong>Install Termux-style</strong>:
+                        <p>Go to your home directory:</p>
+                        <div class="code-block">
+                            <pre><code>cd $HOME</code></pre>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+                        </div>
+                        <p>Clone the repository:</p>
+                        <div class="code-block">
+                            <pre><code>git clone https://github.com/adi1090x/termux-style</code></pre>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+                        </div>
+                        <p>Change to the termux-style directory:</p>
+                        <div class="code-block">
+                            <pre><code>cd termux-style</code></pre>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+                        </div>
+                        <p>To install it, run:</p>
+                        <div class="code-block">
+                            <pre><code>./install</code></pre>
+                            <button class="copy-button" onclick="copyToClipboard(this)">Copy</button>
+                        </div>
+                    </li>
+                </ol>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://twitter.com/codewithperry" target="_blank">Twitter(X)</a> |
+            <a href="https://youtube.com/@codewithperry" target="_blank">YouTube</a> |
+            <a href="https://github.com/codewithperry" target="_blank">GitHub</a>
+        </div>
+        <p>&copy; 2024 | CodeWithPerry</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
